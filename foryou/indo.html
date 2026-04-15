@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri 10 Foto</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('indo.jpg'); /* GANTI BACKGROUND */
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    /* GRID 2 KOLOM */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .foto {
+      width: 100%;
+      height: 200px;
+      border-radius: 15px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .foto:hover {
+      transform: scale(1.05);
+    }
+
+    /* TEKS (TIDAK BISA DIKLIK) */
+    .teks {
+      margin-top: 8px;
+      background: rgba(0,0,0,0.6);
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: default;
+    }
+
+    /* TOMBOL KEMBALI */
+    .kembali {
+      text-align: center;
+      font-size: 25px;
+      margin: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .kembali:hover {
+      color: #ff1493;
+      transform: translateY(-5px);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- FOTO 1 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal1.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">SKANDAL DI TOKO
+    </div>
+  </div>
+
+  <!-- FOTO 2 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal2.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">HAKOK DENGAN SANG PACAR</div>
+  </div>
+
+  <!-- FOTO 3 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal3.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">DOGGY SERU</div>
+  </div>
+
+  <!-- FOTO 4 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal4.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">CEWENYA MINTA AMPUN</div>
+  </div>
+
+  <!-- FOTO 5 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal5.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">KESAKITAN</div>
+  </div>
+
+  <!-- FOTO 6 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal6.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">AKU BERAT GA?</div>
+  </div>
+
+  <!-- FOTO 7 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal7.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">SKANDAL DI WC</div>
+  </div>
+
+  <!-- FOTO 8 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal8.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">SKANDAL DI RUANG KELUARGA</div>
+  </div>
+
+  <!-- FOTO 9 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal9.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">SKANDAL DI KAMAR</div>
+  </div>
+
+  <!-- FOTO 10 -->
+  <div class="item">
+    <div class="foto" onclick="go('hal10.html')">
+      <img src="salam.jpg">
+    </div>
+    <div class="teks">30 detik menegangkan</div>
+  </div>
+
+</div>
+
+<!-- KEMBALI -->
+<div class="kembali" onclick="kembali()">
+  ⬅ HOME
+</div>
+
+<script>
+  function go(link) {
+    window.location.href = link;
+  }
+
+  function kembali() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
